@@ -1,0 +1,1 @@
+In den Unterverzeichnissen dieses Verzeichnisses befinden sich alle vom AI Agent erstellten Resourcen (exercises, learning-scripts, ...), des entsprechenden Typs

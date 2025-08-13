@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- =================================== -->
+<!-- MOODLE TESTFRAGEN TEMPLATE          -->
+<!-- Erstellt mit create-moodletest-questions.chatmode.md -->
+<!-- =================================== -->
+
+<!-- Kategorie-Definition -->
+<question type="category">
+  <category>
+    <text>$course$/[KATEGORIE_NAME]</text>
+  </category>
+  <info format="html">
+    <text><![CDATA[<p>[KATEGORIE_BESCHREIBUNG]</p>]]></text>
+  </info>
+  <idnumber></idnumber>
+</question>
+
+<!-- =================================== -->
+<!-- MULTIPLE CHOICE TEMPLATE            -->
+<!-- =================================== -->
+<question type="multichoice">
+  <name>
+    <text>[MC_FRAGE_TITEL]</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>[MC_FRAGE_TEXT]</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>[MC_ALLGEMEINES_FEEDBACK]</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <idnumber></idnumber>
+  <single>true</single>
+  <shuffleanswers>true</shuffleanswers>
+  <answernumbering>abc</answernumbering>
+  <correctfeedback format="html">
+    <text>Die Antwort ist richtig.</text>
+  </correctfeedback>
+  <partiallycorrectfeedback format="html">
+    <text>Die Antwort ist teilweise richtig.</text>
+  </partiallycorrectfeedback>
+  <incorrectfeedback format="html">
+    <text>Die Antwort ist falsch.</text>
+  </incorrectfeedback>
+  <shownumcorrect/>
+  <answer fraction="100" format="moodle_auto_format">
+    <text>[MC_RICHTIGE_ANTWORT]</text>
+    <feedback format="html">
+      <text><![CDATA[<p>[MC_FEEDBACK_RICHTIG]</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="moodle_auto_format">
+    <text>[MC_FALSCHE_ANTWORT_1]</text>
+    <feedback format="html">
+      <text><![CDATA[<p>[MC_FEEDBACK_FALSCH_1]</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="moodle_auto_format">
+    <text>[MC_FALSCHE_ANTWORT_2]</text>
+    <feedback format="html">
+      <text><![CDATA[<p>[MC_FEEDBACK_FALSCH_2]</p>]]></text>
+    </feedback>
+  </answer>
+</question>
+
+<!-- =================================== -->
+<!-- SHORT ANSWER TEMPLATE               -->
+<!-- =================================== -->
+<question type="shortanswer">
+  <name>
+    <text>[SA_FRAGE_TITEL]</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>[SA_FRAGE_TEXT]</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text><![CDATA[<p>[SA_ALLGEMEINES_FEEDBACK]</p>]]></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <idnumber></idnumber>
+  <usecase>1</usecase>
+  <answer fraction="100" format="moodle_auto_format">
+    <text>[SA_RICHTIGE_ANTWORT]</text>
+    <feedback format="html">
+      <text><![CDATA[<p>[SA_FEEDBACK_RICHTIG]</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="75" format="moodle_auto_format">
+    <text>[SA_TEILWEISE_RICHTIG]</text>
+    <feedback format="html">
+      <text><![CDATA[<p>[SA_FEEDBACK_TEILWEISE]</p>]]></text>
+    </feedback>
+  </answer>
+</question>
+
+<!-- =================================== -->
+<!-- TRUE/FALSE TEMPLATE                 -->
+<!-- =================================== -->
+<question type="truefalse">
+  <name>
+    <text>[TF_FRAGE_TITEL]</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>[TF_FRAGE_TEXT]</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>1.0000000</penalty>
+  <hidden>0</hidden>
+  <idnumber></idnumber>
+  <answer fraction="100" format="moodle_auto_format">
+    <text>[true/false]</text>
+    <feedback format="html">
+      <text><![CDATA[<p>[TF_FEEDBACK_RICHTIG]</p>]]></text>
+    </feedback>
+  </answer>
+  <answer fraction="0" format="moodle_auto_format">
+    <text>[false/true]</text>
+    <feedback format="html">
+      <text><![CDATA[<p>[TF_FEEDBACK_FALSCH]</p>]]></text>
+    </feedback>
+  </answer>
+</question>
+
+<!-- =================================== -->
+<!-- MATCHING TEMPLATE                   -->
+<!-- =================================== -->
+<question type="matching">
+  <name>
+    <text>[MATCH_FRAGE_TITEL]</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>[MATCH_FRAGE_TEXT]</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <idnumber></idnumber>
+  <shuffleanswers>true</shuffleanswers>
+  <correctfeedback format="html">
+    <text>Die Antwort ist richtig.</text>
+  </correctfeedback>
+  <partiallycorrectfeedback format="html">
+    <text>Die Antwort ist teilweise richtig.</text>
+  </partiallycorrectfeedback>
+  <incorrectfeedback format="html">
+    <text>Die Antwort ist falsch.</text>
+  </incorrectfeedback>
+  <shownumcorrect/>
+  <subquestion format="html">
+    <text><![CDATA[<p>[MATCH_BEGRIFF_1]</p>]]></text>
+    <answer>
+      <text>[MATCH_ZUORDNUNG_1]</text>
+    </answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>[MATCH_BEGRIFF_2]</p>]]></text>
+    <answer>
+      <text>[MATCH_ZUORDNUNG_2]</text>
+    </answer>
+  </subquestion>
+  <subquestion format="html">
+    <text><![CDATA[<p>[MATCH_BEGRIFF_3]</p>]]></text>
+    <answer>
+      <text>[MATCH_ZUORDNUNG_3]</text>
+    </answer>
+  </subquestion>
+</question>
+
+<!-- =================================== -->
+<!-- CLOZE TEMPLATE                      -->
+<!-- =================================== -->
+<question type="cloze">
+  <name>
+    <text>[CLOZE_FRAGE_TITEL]</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>[CLOZE_TEXT_MIT_LUECKEN]</p>
+<p>Beispiel: Die Annotation {1:SAC:=@Entity} markiert eine Klasse als {2:MULTICHOICE:=persistente Entität~einfache Klasse~Interface}.</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <idnumber></idnumber>
+</question>
+
+<!-- =================================== -->
+<!-- DRAG-AND-DROP TEXT TEMPLATE         -->
+<!-- =================================== -->
+<question type="ddwtos">
+  <name>
+    <text>[DD_FRAGE_TITEL]</text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>[DD_FRAGE_TEXT]</p>
+<p>Ziehen Sie die passenden Begriffe in die Lücken: [[1]] ist eine [[2]] für [[3]].</p>]]></text>
+  </questiontext>
+  <generalfeedback format="html">
+    <text></text>
+  </generalfeedback>
+  <defaultgrade>1.0000000</defaultgrade>
+  <penalty>0.3333333</penalty>
+  <hidden>0</hidden>
+  <idnumber></idnumber>
+  <shuffleanswers>1</shuffleanswers>
+  <correctfeedback format="html">
+    <text>Die Antwort ist richtig.</text>
+  </correctfeedback>
+  <partiallycorrectfeedback format="html">
+    <text>Die Antwort ist teilweise richtig.</text>
+  </partiallycorrectfeedback>
+  <incorrectfeedback format="html">
+    <text>Die Antwort ist falsch.</text>
+  </incorrectfeedback>
+  <shownumcorrect/>
+  <dragbox>
+    <text>[DD_BEGRIFF_1]</text>
+    <group>1</group>
+  </dragbox>
+  <dragbox>
+    <text>[DD_BEGRIFF_2]</text>
+    <group>1</group>
+  </dragbox>
+  <dragbox>
+    <text>[DD_BEGRIFF_3]</text>
+    <group>1</group>
+  </dragbox>
+</question>
+
+</quiz>

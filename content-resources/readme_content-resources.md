@@ -1,0 +1,1 @@
+In den Unterverzeichnissen dieses Verzeichnisses sich jeweils die Resourcen, die für die Erstellung der Lernresourcen in den jeweiligen Bereichen (exercieses, learning-scripts, ..) vom AI Agent verwendet werden sollen

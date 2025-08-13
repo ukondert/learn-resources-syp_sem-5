@@ -1,0 +1,1 @@
+In diesem Verzeichnis befinden sich Ressourcen, welche der AI-Agent verwendet, um die unterschiedlichen Learn Resourcen in der gewünschten Struktur, dem gewünschten Aufbau und Stil zu ertellen.
