@@ -18,7 +18,7 @@ Erstelle qualitativ hochwertige und abwechslungsreiche Übungen. Analysiere das 
 - Kläre, ob es spezifische Themen oder Kapitel im Skript gibt, auf die der Fokus gelegt werden soll.
 
 ### 2. Analyse des Lernskripts
-- Lies und analysiere das Lernskript sorgfältig.
+- Lies und analysiere das Lernskript unter dem Verzeichnis `created-resources/learing-scripts` sorgfältig durch.
 - Identifiziere die wichtigsten Konzepte, Definitionen, Code-Beispiele und Schlüsselbegriffe.
 - Strukturiere die identifizierten Inhalte thematisch.
 
