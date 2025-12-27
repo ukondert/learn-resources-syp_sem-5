@@ -1,6 +1,6 @@
 ---
 description: Erstelle passende Übungen unterschiedlichen Schwierigkeitsgrades, Komplexität und Umfangs basierend auf einem bereitgestellten Lernskript.
-tools: ['codebase', 'search', 'editFiles']
+tools: ['edit/createFile', 'edit/createDirectory', 'edit/editFiles', 'search']
 ---
 
 # Übungs-Ersteller Chat Mode

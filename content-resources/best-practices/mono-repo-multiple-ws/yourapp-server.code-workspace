@@ -1,0 +1,182 @@
+{
+  "folders": [
+	  { "path": "server" },
+    { "path": ".github" },
+    { "path": "docs" },
+    { "path": "shared-resources" }
+	],
+  "settings": {
+    "files.exclude": {
+      "../mobile": true,
+      "../admin-web": true,
+      "../infra": true,
+    },
+    "chat.modeFilesLocations": {
+      "../.github/chatmodes": true
+    },
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.maven.downloadSources": true,
+    "java.saveActions.organizeImports": true,
+    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    "java.format.settings.profile": "GoogleStyle",
+    "[java]": {
+      "editor.defaultFormatter": "redhat.java",
+      "editor.formatOnSave": true,
+      "editor.rulers": [120],
+      "editor.tabSize": 2,
+      "editor.insertSpaces": true
+    },
+    "[xml]": {
+      "editor.formatOnSave": true
+    },
+    "[yaml]": {
+      "editor.formatOnSave": true
+    },
+    "[properties]": {
+      "editor.formatOnSave": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "vscjava.vscode-java-pack",
+      "redhat.java",
+      "vscjava.vscode-maven",
+      "vmware.vscode-spring-boot",
+      "vscjava.vscode-spring-initializr",
+      "vscjava.vscode-spring-boot-dashboard",
+      "redhat.vscode-xml",
+      "redhat.vscode-yaml",
+      "usernamehw.errorlens",
+      "eamodio.gitlens",
+      "streetsidesoftware.code-spell-checker",
+      "SonarSource.sonarlint-vscode",
+      "ms-vscode.test-adapter-converter"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "maven: clean",
+        "type": "shell",
+        "command": "mvn clean",
+        "options": {
+          "cwd": "${workspaceFolder}/server"
+        },
+        "group": "build",
+        "problemMatcher": "$msCompile"
+      },
+      {
+        "label": "maven: compile",
+        "type": "shell",
+        "command": "mvn compile",
+        "options": {
+          "cwd": "${workspaceFolder}/server"
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": "$msCompile"
+      },
+      {
+        "label": "maven: test",
+        "type": "shell",
+        "command": "mvn test",
+        "options": {
+          "cwd": "${workspaceFolder}/server"
+        },
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        },
+        "problemMatcher": "$msCompile"
+      },
+      {
+        "label": "maven: verify",
+        "type": "shell",
+        "command": "mvn verify",
+        "options": {
+          "cwd": "${workspaceFolder}/server"
+        },
+        "group": "test",
+        "problemMatcher": "$msCompile"
+      },
+      {
+        "label": "maven: package",
+        "type": "shell",
+        "command": "mvn package",
+        "options": {
+          "cwd": "${workspaceFolder}/server"
+        },
+        "group": "build",
+        "problemMatcher": "$msCompile"
+      },
+      {
+        "label": "spring-boot: run",
+        "type": "shell",
+        "command": "mvn spring-boot:run",
+        "options": {
+          "cwd": "${workspaceFolder}/server"
+        },
+        "group": "build",
+        "isBackground": true,
+        "problemMatcher": {
+          "pattern": {
+            "regexp": ".",
+            "file": 1,
+            "location": 2,
+            "message": 3
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^.*Tomcat.*started on port.*$",
+            "endsPattern": "^.*Started.*Application.*$"
+          }
+        }
+      },
+      {
+        "label": "spring-boot: run with profile",
+        "type": "shell",
+        "command": "mvn spring-boot:run -Dspring-boot.run.profiles=${input:profile}",
+        "options": {
+          "cwd": "${workspaceFolder}/server"
+        },
+        "group": "build",
+        "isBackground": true,
+        "problemMatcher": {
+          "pattern": {
+            "regexp": ".",
+            "file": 1,
+            "location": 2,
+            "message": 3
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^.*Tomcat.*started on port.*$",
+            "endsPattern": "^.*Started.*Application.*$"
+          }
+        }
+      },
+      {
+        "label": "maven: dependency tree",
+        "type": "shell",
+        "command": "mvn dependency:tree",
+        "options": {
+          "cwd": "${workspaceFolder}/server"
+        },
+        "group": "build",
+        "problemMatcher": []
+      }
+    ]
+  },
+  "inputs": [
+    {
+      "id": "profile",
+      "description": "Spring Profile",
+      "default": "dev",
+      "type": "promptString"
+    }
+  ]
+}

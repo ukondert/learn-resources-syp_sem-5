@@ -1,0 +1,276 @@
+{
+  "folders": [
+    { "path": "admin-web" },
+    { "path": ".github" },
+    { "path": "docs" },
+    { "path": "shared-resources" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "../mobile": true,
+      "../server": true,
+      "../infra": true
+    },
+    "chat.modeFilesLocations": {
+      "../.github/chatmodes": true
+    },
+    // TypeScript/JavaScript Settings
+    "typescript.preferences.includePackageJsonAutoImports": "auto",
+    "typescript.suggest.autoImports": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.suggest.autoImports": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    
+    // ESLint Settings
+    "eslint.workingDirectories": ["admin-web"],
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    
+    // Prettier Settings
+    "prettier.requireConfig": true,
+    "prettier.useEditorConfig": false,
+    
+    // Editor Settings for Web Technologies
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+      },
+      "editor.rulers": [100],
+      "editor.tabSize": 2
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+      },
+      "editor.rulers": [100],
+      "editor.tabSize": 2
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+      },
+      "editor.rulers": [100],
+      "editor.tabSize": 2
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+      },
+      "editor.rulers": [100],
+      "editor.tabSize": 2
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.tabSize": 2
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.tabSize": 2
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.tabSize": 2
+    },
+    "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.tabSize": 2
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.tabSize": 2
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.tabSize": 2
+    },
+    
+    // Emmet Settings
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact",
+      "typescript": "typescriptreact"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      // Core Web Development
+      "ms-vscode.vscode-typescript-next",
+      "bradlc.vscode-tailwindcss",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      
+      // React Development
+      "dsznajder.es7-react-js-snippets",
+      "formulahendry.auto-rename-tag",
+      "christian-kohler.path-intellisense",
+      "zignd.html-css-class-completion",
+      
+      // General Development
+      "usernamehw.errorlens",
+      "eamodio.gitlens",
+      "streetsidesoftware.code-spell-checker",
+      "ms-vscode.vscode-json",
+      
+      // Testing & Debugging
+      "ms-vscode.vscode-jest",
+      "hbenl.vscode-test-explorer",
+      "ms-vscode.js-debug",
+      
+      // Package Management
+      "christian-kohler.npm-intellisense",
+      "eg2.vscode-npm-script",
+      
+      // Additional Utilities
+      "yzhang.markdown-all-in-one",
+      "redhat.vscode-yaml",
+      "ms-vscode.live-server"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "npm: install",
+        "type": "shell",
+        "command": "npm install",
+        "options": {
+          "cwd": "${workspaceFolder}/admin-web"
+        },
+        "group": "build",
+        "problemMatcher": []
+      },
+      {
+        "label": "npm: start",
+        "type": "shell",
+        "command": "npm start",
+        "options": {
+          "cwd": "${workspaceFolder}/admin-web"
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "isBackground": true,
+        "problemMatcher": {
+          "pattern": {
+            "regexp": ".",
+            "file": 1,
+            "location": 2,
+            "message": 3
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "webpack compiled",
+            "endsPattern": "(webpack compiled|Failed to compile)"
+          }
+        }
+      },
+      {
+        "label": "npm: build",
+        "type": "shell",
+        "command": "npm run build",
+        "options": {
+          "cwd": "${workspaceFolder}/admin-web"
+        },
+        "group": "build",
+        "problemMatcher": ["$tsc"]
+      },
+      {
+        "label": "npm: test",
+        "type": "shell",
+        "command": "npm test",
+        "options": {
+          "cwd": "${workspaceFolder}/admin-web"
+        },
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "npm: test with coverage",
+        "type": "shell",
+        "command": "npm run test:coverage",
+        "options": {
+          "cwd": "${workspaceFolder}/admin-web"
+        },
+        "group": "test",
+        "problemMatcher": []
+      },
+      {
+        "label": "npm: lint",
+        "type": "shell",
+        "command": "npm run lint",
+        "options": {
+          "cwd": "${workspaceFolder}/admin-web"
+        },
+        "group": "test",
+        "problemMatcher": ["$eslint-stylish"]
+      },
+      {
+        "label": "npm: lint fix",
+        "type": "shell",
+        "command": "npm run lint:fix",
+        "options": {
+          "cwd": "${workspaceFolder}/admin-web"
+        },
+        "group": "build",
+        "problemMatcher": ["$eslint-stylish"]
+      },
+      {
+        "label": "npm: format",
+        "type": "shell",
+        "command": "npm run format",
+        "options": {
+          "cwd": "${workspaceFolder}/admin-web"
+        },
+        "group": "build",
+        "problemMatcher": []
+      },
+      {
+        "label": "npm: type check",
+        "type": "shell",
+        "command": "npm run type-check",
+        "options": {
+          "cwd": "${workspaceFolder}/admin-web"
+        },
+        "group": "test",
+        "problemMatcher": ["$tsc"]
+      },
+      {
+        "label": "npm: preview",
+        "type": "shell",
+        "command": "npm run preview",
+        "options": {
+          "cwd": "${workspaceFolder}/admin-web"
+        },
+        "group": "build",
+        "isBackground": true,
+        "problemMatcher": []
+      },
+      {
+        "label": "npm: analyze bundle",
+        "type": "shell",
+        "command": "npm run analyze",
+        "options": {
+          "cwd": "${workspaceFolder}/admin-web"
+        },
+        "group": "build",
+        "problemMatcher": []
+      }
+    ]
+  }
+}

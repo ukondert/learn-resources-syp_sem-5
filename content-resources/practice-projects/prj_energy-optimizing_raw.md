@@ -1,0 +1,10 @@
+Projekt: Energieoptimierung
+
+Ziel ist es, den Energieverbrauch von öffentlichen Gebäuden durch das gezielte Beeinflussen der Heizungssteuerung zu optimieren.
+Dazu sollte eine Web Plattform geschaffen werden, bei der Raumtemperatursensoren alle paar Minuten die aktuelle Raumtemperatur an einen Server senden. Der Server selbst sendet dann als Antwort die gewünschte Zieltemperatur und das Toleranzband zurück – woraufhin der Raumtemperatursensor versucht die neue Temperatur durch gezieltes Lüften oder Heizen erreichen.
+Aufgabenstellung:
+Die Sensoren sollten über eine Weboberfläche angelegt werden können, und je angelegtem Sensor sollte ein API Key vergeben werden können. Nur mit diesem Key können die Daten an den Server gesendet werden. Ebenso sollte die Integrität der Daten (Die Daten stammen sicher vom Sensor X und sind am Weg auch nicht verändert worden) sichergestellt sein. Für jeden Sensor sollte ein Zeitprogramm hinterlegt werden können, wann welche Zieltemperatur gilt.
+Es sollte möglich sein den Temperaturverlauf jedes Sensors auf einem Dashboard einzusehen. Der Benutzer sollte dazu zeitlich Einschränkungen vorgeben können (z.B: die letzten 3 Tage, Datum von-bis, …) und die Daten als interaktives Diagramm präsentiert bekommen.
+Ebenso sollte eine Tabelle existieren in der die akkumulierten Zeiten in denen sich der Sensor innerhalb des Toleranzbandes befand angezeigt wird. Damit kann man quantitativ bewerten welcher Raumsensor am besten funktioniert.
+Damit man das auch testen kann sollte ebenso eine Java(FX) Anwendung geschrieben werden welche einen solchen Raumsensor simuliert.
+Das System sollte „Mehr-mandantenfähig“ sein – was bedeutet das verschiedene Institutionen dasselbe System benutzen können, jedoch nicht die Daten der jeweilig anderen Institution einsehen können.

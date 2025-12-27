@@ -1,0 +1,20 @@
+{
+  "folders": [
+    { "path": "." },
+    { "path": "mobile" },
+    { "path": "admin-web" },
+    { "path": "server" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.idea": true,
+      "**/.vscode": false,
+      "**/node_modules": true,
+      "**/build": true,
+      "**/dist": true,
+      "**/out": true,
+      "**/target": true
+    }
+  }
+}

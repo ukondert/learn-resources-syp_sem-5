@@ -1,19 +1,4 @@
 {
-	"inputs": [
-		{
-			"type": "promptString",
-			"id": "refApiKey",
-			"description": "Your Ref API Key",
-			"password": true
-		},
-		{
-			"type": "promptString",
-			"id": "semGrepApiKey",
-			"description": "Your semGrepApiKey API Key",
-			"password": true
-		}
-		
-	],
 	"servers": {
 		"memory": {
 		"command": "npx",
@@ -41,16 +26,6 @@
 			},
 			"type": "stdio"
 		},
-		"semgrep": {
-			"command": "uvx",
-			"args": [
-				"semgrep-mcp"
-			],
-			"env": {
-				"SEMGREP_APP_TOKEN": "${input:semGrepApiKey}"
-			},
-			"type": "stdio"
-		},
 		"exa": {
 			"command": "npx",
 			"args": [
@@ -60,7 +35,6 @@
 			],
 			"type": "stdio"
 		},
-		
 		"markitdown": {
 			"type": "stdio",
 			"command": "uvx",
