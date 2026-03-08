@@ -49,6 +49,13 @@
 				"-y",
 				"@modelcontextprotocol/server-sequential-thinking@latest"
 			],
-		}
+		},
+		"NotebookLM": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"notebooklm-mcp@latest"
+			]
+		},
 	}
 }
