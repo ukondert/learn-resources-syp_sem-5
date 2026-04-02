@@ -29,21 +29,28 @@
     - [1.4.6. Antigravity Agent-Modi](#146-antigravity-agent-modi)
     - [1.4.7. Agent erstellen (Schritt-für-Schritt)](#147-agent-erstellen-schritt-für-schritt)
     - [1.4.8. Quellen und Referenzen](#148-quellen-und-referenzen)
-  - [1.5. Custom Prompts \& Workflows](#15-custom-prompts--workflows)
-    - [1.5.1. Was sind Custom Prompts / Workflows?](#151-was-sind-custom-prompts--workflows)
-    - [1.5.2. VS Code Custom Prompts](#152-vs-code-custom-prompts)
-    - [1.5.3. Antigravity Workflows](#153-antigravity-workflows)
-    - [1.5.4. Turbo-Annotation für automatische Ausführung](#154-turbo-annotation-für-automatische-ausführung)
-    - [1.5.5. Custom Prompts/Workflows erstellen](#155-custom-promptsworkflows-erstellen)
-    - [1.5.6. Best Practices](#156-best-practices)
-    - [1.5.7. Quellen und Referenzen](#157-quellen-und-referenzen)
-  - [1.6. Best Practices \& Erweiterungen](#16-best-practices--erweiterungen)
-    - [1.6.1. Dokumenten-Templates](#161-dokumenten-templates)
-    - [1.6.2. Kontext-Dateien \& Referenzquellen](#162-kontext-dateien--referenzquellen)
-    - [1.6.3. SubAgents für Kontextisolation (VS Code)](#163-subagents-für-kontextisolation-vs-code)
-    - [1.6.4. Prompt-Bibliotheken](#164-prompt-bibliotheken)
-    - [1.6.5. Komposition von Agentic Workflows](#165-komposition-von-agentic-workflows)
-    - [1.6.6. Weitere Best Practices](#166-weitere-best-practices)
+  - [1.5. Skills in der KI-unterstützten SW-Entwicklung](#15-skills-in-der-ki-unterstützten-sw-entwicklung)
+    - [1.5.1. Was sind Skills?](#151-was-sind-skills)
+    - [1.5.2. Abgrenzung zu Instructions, Prompts und Agents](#152-abgrenzung-zu-instructions-prompts-und-agents)
+    - [1.5.3. Aufbau und Struktur](#153-aufbau-und-struktur)
+    - [1.5.4. Einsatzfälle und Praxisbeispiel](#154-einsatzfälle-und-praxisbeispiel)
+    - [1.5.5. Best Practices und Einführung im Team](#155-best-practices-und-einführung-im-team)
+    - [1.5.6. Einordnung für dieses Lernscript](#156-einordnung-für-dieses-lernscript)
+  - [1.6. Custom Prompts \& Workflows](#16-custom-prompts--workflows)
+    - [1.6.1. Was sind Custom Prompts / Workflows?](#161-was-sind-custom-prompts--workflows)
+    - [1.6.2. VS Code Custom Prompts](#162-vs-code-custom-prompts)
+    - [1.6.3. Antigravity Workflows](#163-antigravity-workflows)
+    - [1.6.4. Turbo-Annotation für automatische Ausführung](#164-turbo-annotation-für-automatische-ausführung)
+    - [1.6.5. Custom Prompts/Workflows erstellen](#165-custom-promptsworkflows-erstellen)
+    - [1.6.6. Best Practices](#166-best-practices)
+    - [1.6.7. Quellen und Referenzen](#167-quellen-und-referenzen)
+  - [1.7. Best Practices \& Erweiterungen](#17-best-practices--erweiterungen)
+    - [1.7.1. Dokumenten-Templates](#171-dokumenten-templates)
+    - [1.7.2. Kontext-Dateien \& Referenzquellen](#172-kontext-dateien--referenzquellen)
+    - [1.7.3. SubAgents für Kontextisolation (VS Code)](#173-subagents-für-kontextisolation-vs-code)
+    - [1.7.4. Prompt-Bibliotheken](#174-prompt-bibliotheken)
+    - [1.7.5. Komposition von Agentic Workflows](#175-komposition-von-agentic-workflows)
+    - [1.7.6. Weitere Best Practices](#176-weitere-best-practices)
 
 
 <div style="page-break-after: always;"></div>
@@ -74,6 +81,16 @@
       <td>Erweiterung um Kapitel 1.2.4 "Technische Funktionsweise (Prompt-Architektur)"</td>
       <td>KUW</td>
     </tr>
+    <tr>
+      <td>25.03.2026</td>
+      <td>Erweiterung um Kapitel "Skills in der KI-unterstützten SW-Entwicklung"</td>
+      <td>Copilot</td>
+    </tr>
+    <tr>
+      <td>02.04.2026</td>
+      <td>Skills als eigenes Kapitel vor Workflows verschoben; Kapitelübersicht und Nummerierung angepasst</td>
+      <td>Copilot</td>
+    </tr>
   </tbody>
 </table>
 
@@ -93,6 +110,7 @@ Das Script vermittelt nicht nur die grundlegenden Funktionen, sondern zeigt insb
 - **Custom Instructions** für konsistente, projektspezifische KI-Antworten
 - **Custom Agents** für spezialisierte Entwicklungsrollen
 - **Workflows** für automatisierte, wiederkehrende Aufgaben
+- **Skills** für bedarfsorientiertes Expertenwissen mit gebündelten Referenzen, Templates und Scripts
 - **Parallele Delegation** für effiziente Team-Entwicklung
 
 > :bulb: **Lernziel:** Nach Durcharbeitung dieses Scripts können Sie KI-Assistenten optimal für Ihre Projektanforderungen konfigurieren und nutzen.
@@ -256,18 +274,18 @@ Dieses Script ist in sechs aufeinander aufbauende Kapitel gegliedert:
 |---------|-------|-----------|
 | **2** | **Custom Instructions** | Grundlage für konsistente KI-Antworten – definiert projektweite Standards und Coding-Guidelines |
 | **3** | **Custom Agents** | Spezialisierte KI-Rollen für unterschiedliche Aufgaben (Requirements, Architektur, Testing) |
-| **4** | **Workflows** | Automatisierung wiederkehrender Prozesse – von Feature-Entwicklung bis Deployment |
-| **5** | **Parallele Delegation** | Effiziente Nutzung mehrerer Agents für komplexe Aufgaben |
-| **6** | **Praktische Beispiele** | Konkrete, sofort einsetzbare Konfigurationen und Vorlagen |
+| **4** | **Skills** | Wiederverwendbare Expertenbausteine mit Anweisungen, Referenzen, Templates und Scripts |
+| **5** | **Custom Prompts & Workflows** | Automatisierung wiederkehrender Prozesse – von Standardaufgaben bis zu geführten Abläufen |
+| **6** | **Best Practices & Erweiterungen** | Vertieft den produktiven Einsatz mit Templates, Kontextquellen und Workflow-Komposition |
 
 #### Lernpfad
 
 ```mermaid
 graph LR
     A[Custom Instructions] --> B[Custom Agents]
-    B --> C[Workflows]
-    C --> D[Parallele Delegation]
-    D --> E[Praxis]
+  B --> C[Skills]
+  C --> D[Workflows]
+  D --> E[Praxis]
     
     style A fill:#e1f5fe
     style B fill:#e8f5e9
@@ -276,7 +294,7 @@ graph LR
     style E fill:#f3e5f5
 ```
 
-**Empfehlung:** Arbeiten Sie die Kapitel sequentiell durch, da jedes auf den vorherigen aufbaut. Die praktischen Beispiele in Kapitel 6 setzen das Verständnis aller vorherigen Konzepte voraus.
+**Empfehlung:** Arbeiten Sie die Kapitel sequentiell durch, da jedes auf den vorherigen aufbaut. Kapitel 4 führt Skills als modulare Wissensbausteine ein; Kapitel 6 zeigt danach, wie Sie diese Konzepte in belastbare Team-Workflows überführen.
 
 ---
 
@@ -1181,13 +1199,246 @@ Alte `.chatmode.md` Dateien können migriert werden:
 
 <div style="page-break-after: always"></div>
 
-## 1.5. Custom Prompts & Workflows
+## 1.5. Skills in der KI-unterstützten SW-Entwicklung
+
+Dieses Kapitel zeigt, wie sich wiederkehrendes Expertenwissen als bedarfsgerecht ladbare Bausteine in agentische Entwicklungsprozesse integrieren lässt.
+
+---
+
+### 1.5.1. Was sind Skills?
+
+Skills sind ein zentrales Mittel, um **wiederkehrendes Expertenwissen bedarfsgerecht** in den Entwicklungsprozess einzubinden. Während Instructions dauerhaft gelten und Prompts einzelne Aufgaben starten, bündeln Skills **Anweisungen, Referenzen, Templates und Scripts** in einem wiederverwendbaren Paket, das nur dann geladen wird, wenn es wirklich relevant ist.
+
+**Definition:** Skills sind Ordner mit einer `SKILL.md` als Einstiegspunkt sowie optionalen Unterordnern für Hilfsdateien. Ein Agent lädt sie **on-demand**, sobald Beschreibung und Kontext erkennen lassen, dass der Skill zur aktuellen Aufgabe passt.
+
+| Merkmal | Bedeutung |
+|---------|-----------|
+| **On-demand** | Der Skill wird nur bei relevanten Anfragen geladen |
+| **Gebündelte Assets** | Neben Text sind auch Scripts, Templates und Referenzdateien möglich |
+| **Wiederverwendbar** | Ein Skill kann in vielen Chats und Projekten wiederholt eingesetzt werden |
+| **Kontextsparend** | Nur benötigte Teile werden geladen, nicht das gesamte Wissen auf einmal |
+
+> <span style="font-size: 1.5em">:bulb:</span> **Merke:** Ein Skill ist kein "immer aktives Regelwerk", sondern ein **gezielt aktivierbarer Workflow-Baustein**.
+
+---
+
+### 1.5.2. Abgrenzung zu Instructions, Prompts und Agents
+
+| Primitive | Hauptzweck | Wann geeignet? | Typische Grenze |
+|-----------|------------|----------------|-----------------|
+| **Custom Instructions** | Dauerhafte Regeln und Standards | Wenn Vorgaben fast immer gelten sollen | Zu breite `applyTo`-Muster verbrauchen unnötig Kontext |
+| **Prompts** | Einzelne, klar umrissene Aufgabe | Wenn ein einmaliger Task mit fester Vorlage genügt | Keine gebündelten Assets oder mehrstufige Anleitung |
+| **Custom Agents** | Spezifische Rolle mit Tool-Auswahl | Wenn andere Tools, Identitäten oder Handoffs nötig sind | Höherer Konfigurationsaufwand |
+| **Skills** | Wiederverwendbare Spezialverfahren mit Assets | Wenn ein Agent bei bestimmten Aufgaben Expertenwissen nachladen soll | Schlechte Beschreibungen verhindern Discovery |
+
+**Faustregel:**
+
+- **Immer gültig?** → Instruction
+- **Einmalige Vorlage?** → Prompt
+- **Eigene Rolle oder Tool-Grenzen?** → Agent
+- **Wiederkehrender Spezial-Workflow mit Referenzen/Scripts?** → Skill
+
+---
+
+### 1.5.3. Aufbau und Struktur
+
+#### Typische Struktur eines Skills
+
+```text
+.github/skills/code-review/
+├── SKILL.md              # Pflichtdatei, Einstiegspunkt
+├── references/           # Vertiefende Dokumentation
+│   └── checklist.md
+├── assets/               # Templates, Boilerplates, Beispielausgaben
+│   └── review-template.md
+└── scripts/              # Hilfsskripte oder Automatisierungen
+   └── collect-metrics.ps1
+```
+
+#### Speicherorte
+
+| Pfad | Geltungsbereich |
+|------|-----------------|
+| `.github/skills/<name>/` | Projektweit im Repository |
+| `.agents/skills/<name>/` | Projektweit für agentische Setups |
+| `.claude/skills/<name>/` | Projektweit in alternativen Agent-Umgebungen |
+| `~/.copilot/skills/<name>/` | Persönlich, über mehrere Projekte hinweg |
+| `~/.agents/skills/<name>/` | Persönlich für agentische Workflows |
+| `~/.claude/skills/<name>/` | Persönlich in alternativen Agent-Umgebungen |
+
+> <span style="font-size: 1.5em">:warning:</span> **Wichtig:** Der Ordnername muss mit dem `name`-Feld in der `SKILL.md` übereinstimmen. Andernfalls wird der Skill oft nicht erkannt.
+
+#### Aufbau der `SKILL.md`
+
+Der Einstiegspunkt eines Skills kombiniert **YAML-Frontmatter** mit einer kompakten, handlungsorientierten Anleitung.
+
+```markdown
+---
+name: test-strategy
+description: 'Entwirft Teststrategien für Module und Features. Verwende diesen Skill, wenn Unit-, Integrations- oder E2E-Tests geplant oder überprüft werden sollen.'
+argument-hint: '<modul oder feature>'
+user-invocable: true
+disable-model-invocation: false
+---
+
+# Test Strategy Skill
+
+## Wann verwenden?
+- Bei neuen Features mit unklarer Testabdeckung
+- Bei Refactorings mit erhöhtem Regressionsrisiko
+
+## Vorgehen
+1. Analysiere das Modul und identifiziere kritische Pfade.
+2. Erstelle eine Test-Matrix für Unit-, Integrations- und E2E-Tests.
+3. Nutze [Template](./assets/test-plan.md) für die Ausgabe.
+4. Konsultiere [Checkliste](./references/checklist.md) bei Unsicherheiten.
+```
+
+#### Wichtige Frontmatter-Felder
+
+| Feld | Bedeutung |
+|------|-----------|
+| `name` | Eindeutiger Skill-Name; muss zum Ordner passen |
+| `description` | Entscheidend für Discovery; beschreibt **was** und **wann** der Skill genutzt wird |
+| `argument-hint` | Optionale Eingabehilfe bei Slash-Aufruf |
+| `user-invocable` | Steuert, ob der Skill als Slash-Befehl sichtbar ist |
+| `disable-model-invocation` | Verhindert automatische Modell-Aktivierung |
+
+#### Progressive Loading: Warum Skills den Kontext schonen
+
+Skills werden nicht vollständig in einen Chat geladen. Stattdessen erfolgt das Laden schrittweise:
+
+1. **Discovery:** Das Modell betrachtet zunächst vor allem `name` und `description`.
+2. **Instructions:** Erst bei Relevanz wird der Body der `SKILL.md` geladen.
+3. **Resources:** Zusätzliche Dateien aus `references/`, `assets/` oder `scripts/` werden nur bei Bedarf nachgeladen.
+
+Diese progressive Strategie ist für die Praxis wichtig, weil sie **große Wissenspakete modular** macht. Statt alle Regeln ständig im Chat-Kontext mitzuschleppen, lädt der Agent nur den Teil, der für die aktuelle Aufgabe wirklich nötig ist.
+
+#### Slash-Aufruf und automatische Aktivierung
+
+Skills können auf zwei Arten verwendet werden:
+
+1. **Explizit durch Benutzer:** z. B. über `/test-strategy`
+2. **Implizit durch das Modell:** wenn Beschreibung und Anfrage stark zusammenpassen
+
+| Konfiguration | Als Slash-Befehl sichtbar | Automatisch ladbar |
+|---------------|---------------------------|--------------------|
+| Standard | Ja | Ja |
+| `user-invocable: false` | Nein | Ja |
+| `disable-model-invocation: true` | Ja | Nein |
+| Beide Optionen gesetzt | Nein | Nein |
+
+**Praxisbedeutung:**
+
+- Für **Team-Standards** sind automatisch ladbare Skills oft sinnvoll.
+- Für **experimentelle oder sensible Abläufe** kann ein rein manueller Slash-Aufruf besser sein.
+
+---
+
+### 1.5.4. Einsatzfälle und Praxisbeispiel
+
+#### Typische Einsatzfälle in der Software-Entwicklung
+
+Skills sind besonders nützlich, wenn ein Team wiederholt ähnliche Spezialaufgaben bearbeitet, zum Beispiel:
+
+- **Teststrategie ableiten** für neue Features oder Refactorings
+- **Security Review durchführen** mit Checklisten und Remediation-Templates
+- **API Design bewerten** anhand interner Standards und OpenAPI-Vorlagen
+- **Requirements strukturieren** mit Story-Templates, Definition of Done und Prüffragen
+- **Migrationen begleiten** mit Schrittfolgen, Rollback-Checklisten und Validierungs-Skripten
+- **Dokumentations-Workflows standardisieren** inklusive Templates für ADRs, Review-Berichte oder Testpläne
+
+Je repetitiver und wissensintensiver eine Aufgabe ist, desto eher lohnt sich die Verpackung als Skill.
+
+#### Praxisbeispiel: Skill für Code Reviews
+
+Ein Team möchte Code Reviews konsistenter durchführen. Statt die Prüfliste jedes Mal neu in einen Prompt zu schreiben, kann ein Skill verwendet werden.
+
+**Ordner:** `.github/skills/code-review/`
+
+**Beispielidee:**
+
+- `SKILL.md` enthält Auslöser wie *"Nutze diesen Skill bei Code Review, PR-Analyse, Lesbarkeitsprüfung, Risikoanalyse"*
+- `references/checklist.md` enthält projektspezifische Prüfkriterien
+- `assets/review-template.md` liefert ein Standardformat für Findings
+- `scripts/collect-metrics.ps1` sammelt optional Metriken wie Dateianzahl oder Diff-Größe
+
+**Vorteil:** Der Agent muss nicht jedes Mal neu raten, wie ein gutes Review im Team aussieht. Das reduziert Streuung, spart Kontext und erhöht die Wiederholbarkeit.
+
+---
+
+### 1.5.5. Best Practices und Einführung im Team
+
+#### Best Practices für gute Skills
+
+| Do | Don't |
+|----|-------|
+| Beschreibung mit klaren Trigger-Wörtern formulieren | Vage Beschreibungen wie "Hilfreicher Skill" verwenden |
+| `SKILL.md` kurz halten und Details in `references/` auslagern | Eine monolithische Datei mit allen Details schreiben |
+| Relative Pfade wie `./references/checklist.md` nutzen | Auf externe oder tiefe, fragile Pfade verweisen |
+| Schrittfolgen konkret formulieren | Nur abstrakte Ziele ohne Vorgehen nennen |
+| Assets und Templates mitliefern | Ausgaben vollständig dem Modellgedächtnis überlassen |
+| Den Skill auf einen klaren Anwendungsfall zuschneiden | Einen Skill für "alles Mögliche" bauen |
+
+#### Häufige Fehlerquellen
+
+1. **Schwache Description:** Wenn die Formulierung keine Trigger enthält, wird der Skill kaum gefunden.
+2. **Namenskonflikte:** `name` und Ordnername stimmen nicht überein.
+3. **Zu viel Inhalt in `SKILL.md`:** Das widerspricht dem Prinzip des progressiven Ladens.
+4. **Fehlende Prozedur:** Ein Skill ohne klares Vorgehen ist nur eine lose Notiz, aber kein verlässlicher Workflow.
+5. **Falsche Granularität:** Wenn ein Skill für völlig unterschiedliche Aufgaben zuständig ist, sinkt seine Qualität.
+
+#### Schritt-für-Schritt: Einen Skill im Team einführen
+
+1. **Wiederkehrende Aufgabe identifizieren**
+  - Beispiel: "Wir führen häufig Security Reviews für REST-APIs durch."
+
+2. **Minimalen Skill-Zuschnitt wählen**
+  - Nicht "Security allgemein", sondern z. B. "REST API Security Review"
+
+3. **`description` als Discovery-Fläche formulieren**
+  - Schlüsselwörter, typische Aufgaben und Triggerbegriffe aufnehmen
+
+4. **Ressourcen strukturieren**
+  - Checklisten nach `references/`
+  - Templates nach `assets/`
+  - Skripte nach `scripts/`
+
+5. **Im Team testen und nachschärfen**
+  - Wird der Skill zuverlässig gefunden?
+  - Liefert er konsistente Ergebnisse?
+  - Fehlen noch Vorlagen oder Entscheidungshilfen?
+
+---
+
+### 1.5.6. Einordnung für dieses Lernscript
+
+Skills ergänzen die bisher behandelten Konzepte sinnvoll:
+
+- **Instructions** definieren den dauerhaften Rahmen.
+- **Agents** liefern Rollen, Tool-Grenzen und Handoffs.
+- **Prompts/Workflows** starten konkrete Aufgaben.
+- **Skills** bringen bei Bedarf tieferes Spezialwissen, Templates und Hilfsressourcen in genau diese Aufgaben ein.
+
+Dadurch lassen sich KI-gestützte Entwicklungsprozesse nicht nur **schneller**, sondern auch **konsistenter und teamfähiger** gestalten.
+
+***
+Quellen
+
+- VS Code Docs – Agent Skills (`SKILL.md`): https://code.visualstudio.com/docs/copilot/customization/agent-skills
+- VS Code Docs – Copilot Customization Überblick: https://code.visualstudio.com/docs/copilot/customization/overview
+- GitHub Docs – Customizing GitHub Copilot: https://docs.github.com/en/copilot/customizing-copilot
+***
+
+<div style="page-break-after: always"></div>
+
+## 1.6. Custom Prompts & Workflows
 
 Dieses Kapitel behandelt wiederholbare Prompt-Vorlagen für häufige Aufgaben. VS Code verwendet **Custom Prompts**, während Google Antigravity **Workflows** nutzt.
 
 ---
 
-### 1.5.1. Was sind Custom Prompts / Workflows?
+### 1.6.1. Was sind Custom Prompts / Workflows?
 
 **Definition:** Custom Prompts (VS Code) und Workflows (Antigravity) sind vordefinierte Anweisungsvorlagen für wiederkehrende Aufgaben. Sie ermöglichen schnelles Ausführen von Standardoperationen.
 
@@ -1204,7 +1455,7 @@ Dieses Kapitel behandelt wiederholbare Prompt-Vorlagen für häufige Aufgaben. V
 
 ---
 
-### 1.5.2. VS Code Custom Prompts
+### 1.6.2. VS Code Custom Prompts
 
 #### Speicherorte
 
@@ -1352,7 +1603,7 @@ ${selection}
 
 ---
 
-### 1.5.3. Antigravity Workflows
+### 1.6.3. Antigravity Workflows
 
 Google Antigravity verwendet ein ähnliches Konzept namens **Workflows**.
 
@@ -1499,7 +1750,7 @@ Erstelle einen Review-Bericht mit:
 
 ---
 
-### 1.5.4. Turbo-Annotation für automatische Ausführung
+### 1.6.4. Turbo-Annotation für automatische Ausführung
 
 Antigravity Workflows unterstützen eine spezielle Annotation für automatische Befehlsausführung:
 
@@ -1528,7 +1779,7 @@ Führe `npm run build` aus.  // Hier wird nachgefragt (kein turbo)
 
 ---
 
-### 1.5.5. Custom Prompts/Workflows erstellen
+### 1.6.5. Custom Prompts/Workflows erstellen
 
 #### In VS Code
 
@@ -1551,7 +1802,7 @@ Führe `npm run build` aus.  // Hier wird nachgefragt (kein turbo)
 
 ---
 
-### 1.5.6. Best Practices
+### 1.6.6. Best Practices
 
 #### Prompt-Design
 
@@ -1586,7 +1837,7 @@ Führe `npm run build` aus.  // Hier wird nachgefragt (kein turbo)
 
 ---
 
-### 1.5.7. Quellen und Referenzen
+### 1.6.7. Quellen und Referenzen
 
 | Quelle | Beschreibung | Link |
 |--------|--------------|------|
@@ -1598,15 +1849,15 @@ Führe `npm run build` aus.  // Hier wird nachgefragt (kein turbo)
 <div style="page-break-after:always"></div>
 
 
-## 1.6. Best Practices & Erweiterungen
+## 1.7. Best Practices & Erweiterungen
 
-Dieses Kapitel behandelt bewährte Praktiken und funktionale Erweiterungen, die in Kombination mit `Custom Instructions`, `Agents` und `Workflows` eingesetzt werden können.
+Dieses Kapitel behandelt bewährte Praktiken und funktionale Erweiterungen, die in Kombination mit `Custom Instructions`, `Agents`, `Skills` und `Workflows` eingesetzt werden können.
 
 > <span style="font-size: 1.5em">:bulb:</span> **Merksatz:** Standardisiere Quellen und Templates, frage vor dem Erstellen nach, und halte Kontexte schlank – so bleiben KI-gestützte Prozesse effizient und verlässlich.
 
 <div style="page-break-after: always;"></div>
 
-### 1.6.1. Dokumenten-Templates
+### 1.7.1. Dokumenten-Templates
 
 #### Warum Templates verwenden?
 
@@ -1764,7 +2015,7 @@ Quellen
 
 ---
 
-### 1.6.2. Kontext-Dateien & Referenzquellen
+### 1.7.2. Kontext-Dateien & Referenzquellen
 
 Agents können auf zusätzliche Informationsquellen zugreifen, wenn sie wissen **wo** sie relevante Informationen finden und **wann** sie diese nutzen sollten.
 
@@ -1965,7 +2216,7 @@ Quellen
 
 ---
 
-### 1.6.3. SubAgents für Kontextisolation (VS Code)
+### 1.7.3. SubAgents für Kontextisolation (VS Code)
 
 #### Das Problem: Context Confusion
 
@@ -2123,7 +2374,7 @@ Führe mit #runSubagent einen Security-Review der
 
 ---
 
-### 1.6.4. Prompt-Bibliotheken
+### 1.7.4. Prompt-Bibliotheken
 
 #### Was sind Prompt-Bibliotheken?
 
@@ -2279,7 +2530,7 @@ Output: Markdown-Abschnitt ohne Einleitung/Outro.
 
 ---
 
-### 1.6.5. Komposition von Agentic Workflows
+### 1.7.5. Komposition von Agentic Workflows
 
 Der größte Nutzen entsteht durch die **Kombination** dieser Werkzeuge zu anspruchsvollen "Agentic Workflows". Ein bewährter Ansatz ist die Trennung von **Planung** und **Implementierung**:
 
@@ -2292,7 +2543,7 @@ Dieser Workflow optimiert sowohl die Kosten als auch die Qualität der Ergebniss
 
 ---
 
-### 1.6.6. Weitere Best Practices
+### 1.7.6. Weitere Best Practices
 
 *Dieser Abschnitt kann um weitere funktionale Erweiterungen ergänzt werden, z.B.:*
 
@@ -2300,138 +2551,9 @@ Dieser Workflow optimiert sowohl die Kosten als auch die Qualität der Ergebniss
 - **Agent-Orchestrierung** – Komplexe Multi-Agent-Szenarien
 - **Fehlerbehandlung** – Strategien für robuste Agent-Antworten
 - **Caching-Strategien** – Häufig benötigte Informationen vorhalten
-- [Zielsetzung](#zielsetzung)
-- [1. Einführung in KI-gestützte Software-Entwicklung](#1-einführung-in-ki-gestützte-software-entwicklung)
-  - [1.1 Überblick über KI-Coding-Assistenten](#11-überblick-über-ki-coding-assistenten)
-    - [Was können moderne KI-Assistenten?](#was-können-moderne-ki-assistenten)
-  - [1.2 VSCode + GitHub Copilot vs. Antigravity](#12-vscode--github-copilot-vs-antigravity)
-    - [VSCode + GitHub Copilot](#vscode--github-copilot)
-    - [Google Antigravity](#google-antigravity)
-  - [1.3 Grundlegende Konzepte](#13-grundlegende-konzepte)
-    - [Context Engineering](#context-engineering)
-    - [Prompt Engineering](#prompt-engineering)
-    - [Agent-Modi](#agent-modi)
-  - [1.4 Kapitelübersicht](#14-kapitelübersicht)
-    - [Lernpfad](#lernpfad)
-  - [1.5 Quellen und Referenzen](#15-quellen-und-referenzen)
-- [2. Custom Instructions](#2-custom-instructions)
-  - [2.1 Was sind Custom Instructions?](#21-was-sind-custom-instructions)
-    - [Warum Custom Instructions verwenden?](#warum-custom-instructions-verwenden)
-  - [2.2 Typen von Instruction-Dateien](#22-typen-von-instruction-dateien)
-    - [Übersicht](#übersicht)
-    - [2.2.1 `.github/copilot-instructions.md`](#221-githubcopilot-instructionsmd)
-    - [2.2.2 `.instructions.md` Dateien](#222-instructionsmd-dateien)
-    - [2.2.3 `AGENTS.md`](#223-agentsmd)
-  - [2.3 Sprachabhängige Instructions](#23-sprachabhängige-instructions)
-    - [Python](#python)
-    - [Dart/Flutter](#dartflutter)
-  - [2.4 Verzeichnis-basierte Instructions](#24-verzeichnis-basierte-instructions)
-    - [Test-Verzeichnis](#test-verzeichnis)
-    - [Dokumentation](#dokumentation)
-    - [Domain Layer (DDD)](#domain-layer-ddd)
-  - [2.5 Referenzen zwischen Instruction-Dateien](#25-referenzen-zwischen-instruction-dateien)
-  - [2.6 Tool-Referenzen in Instructions](#26-tool-referenzen-in-instructions)
-  - [2.7 Best Practices](#27-best-practices)
-    - [Do's ✅](#dos-)
-    - [Don'ts ❌](#donts-)
-  - [2.8 Quellen und Referenzen](#28-quellen-und-referenzen)
-- [3. Custom Agents](#3-custom-agents)
-  - [3.1 Was sind Custom Agents?](#31-was-sind-custom-agents)
-    - [Unterschied zu Custom Instructions](#unterschied-zu-custom-instructions)
-  - [3.2 Agent-Dateistruktur](#32-agent-dateistruktur)
-    - [Speicherorte](#speicherorte)
-    - [Dateiformat](#dateiformat)
-    - [Header-Eigenschaften](#header-eigenschaften)
-  - [3.3 Tools: MCP-Server und VS Code Extensions](#33-tools-mcp-server-und-vs-code-extensions)
-    - [Built-in VS Code Tools](#built-in-vs-code-tools)
-    - [Was ist das Model Context Protocol (MCP)?](#was-ist-das-model-context-protocol-mcp)
-    - [Warum MCP-Server verwenden?](#warum-mcp-server-verwenden)
-    - [MCP-Server Beispiele](#mcp-server-beispiele)
-    - [MCP-Server Konfiguration](#mcp-server-konfiguration)
-    - [MCP-Tools in Agents verwenden](#mcp-tools-in-agents-verwenden)
-    - [Verfügbare Tools eines MCP-Servers anzeigen](#verfügbare-tools-eines-mcp-servers-anzeigen)
-    - [Beispiel: Dart MCP-Server Tools](#beispiel-dart-mcp-server-tools)
-    - [MCP-Server Quellen und Referenzen](#mcp-server-quellen-und-referenzen)
-  - [3.3 Sequentielle Agent-Verkettung (Handoffs)](#33-sequentielle-agent-verkettung-handoffs)
-    - [Handoff-Konfiguration](#handoff-konfiguration)
-    - [Wie Handoffs funktionieren](#wie-handoffs-funktionieren)
-    - [Beispiel-Workflow](#beispiel-workflow)
-  - [3.4 Agent-Rollen für Software-Entwicklung](#34-agent-rollen-für-software-entwicklung)
-    - [Requirements Engineer Agent](#requirements-engineer-agent)
-    - [SW-Architekt Agent](#sw-architekt-agent)
-    - [Frontend-Developer Agent (CDD)](#frontend-developer-agent-cdd)
-    - [Backend-Developer Agent](#backend-developer-agent)
-    - [Test-Engineer Agent](#test-engineer-agent)
-  - [3.5 Antigravity Agent-Modi](#35-antigravity-agent-modi)
-    - [Die drei Modi](#die-drei-modi)
-    - [Task Boundaries](#task-boundaries)
-    - [Artifacts](#artifacts)
-  - [3.6 Agent erstellen (Schritt-für-Schritt)](#36-agent-erstellen-schritt-für-schritt)
-    - [In VS Code](#in-vs-code)
-    - [Migration von Chat Modes](#migration-von-chat-modes)
-  - [3.7 Quellen und Referenzen](#37-quellen-und-referenzen)
-- [4. Custom Prompts \& Workflows](#4-custom-prompts--workflows)
-  - [4.1 Was sind Custom Prompts / Workflows?](#41-was-sind-custom-prompts--workflows)
-    - [Unterschied zu Agents](#unterschied-zu-agents)
-  - [4.2 VS Code Custom Prompts](#42-vs-code-custom-prompts)
-    - [Speicherorte](#speicherorte-1)
-    - [Dateiformat](#dateiformat-1)
-    - [Header-Eigenschaften](#header-eigenschaften-1)
-    - [Modi erklärt](#modi-erklärt)
-    - [Beispiel: Unit Test Generator](#beispiel-unit-test-generator)
-    - [Beispiel: Code Review Prompt](#beispiel-code-review-prompt)
-    - [Beispiel: Dokumentation Generator](#beispiel-dokumentation-generator)
-    - [Variablen in Prompts](#variablen-in-prompts)
-  - [4.3 Antigravity Workflows](#43-antigravity-workflows)
-    - [Speicherort](#speicherort)
-    - [Dateiformat](#dateiformat-2)
-    - [Beispiel: Feature Implementation Workflow](#beispiel-feature-implementation-workflow)
-    - [Beispiel: Bug Fix Workflow](#beispiel-bug-fix-workflow)
-    - [Beispiel: Code Review Workflow](#beispiel-code-review-workflow)
-  - [4.4 Turbo-Annotation für automatische Ausführung](#44-turbo-annotation-für-automatische-ausführung)
-  - [4.5 Custom Prompts/Workflows erstellen](#45-custom-promptsworkflows-erstellen)
-    - [In VS Code](#in-vs-code-1)
-    - [In Antigravity](#in-antigravity)
-  - [4.6 Best Practices](#46-best-practices)
-    - [Prompt-Design](#prompt-design)
-    - [Workflow-Organisation](#workflow-organisation)
-  - [4.7 Quellen und Referenzen](#47-quellen-und-referenzen)
-- [5. Best Practices \& Erweiterungen](#5-best-practices--erweiterungen)
-  - [5.1. Dokumenten-Templates](#51-dokumenten-templates)
-    - [5.1.1. Warum Templates verwenden?](#511-warum-templates-verwenden)
-    - [5.1.2. Template-Speicherorte](#512-template-speicherorte)
-    - [5.1.3. Templates im Agent referenzieren](#513-templates-im-agent-referenzieren)
-    - [5.1.4. Templates in Workflows verwenden](#514-templates-in-workflows-verwenden)
-    - [5.1.5. Best Practice: Benutzer-Interaktion vor Dokumentenerstellung](#515-best-practice-benutzer-interaktion-vor-dokumentenerstellung)
-    - [5.1.6. Beispiel: Agent mit Template-Konfiguration](#516-beispiel-agent-mit-template-konfiguration)
-  - [5.2. Kontext-Dateien \& Referenzquellen](#52-kontext-dateien--referenzquellen)
-    - [5.2.1. Arten von Kontextquellen](#521-arten-von-kontextquellen)
-    - [5.2.2. Kontext-Dateien im Projekt](#522-kontext-dateien-im-projekt)
-    - [5.2.3. Quellen im Agent referenzieren](#523-quellen-im-agent-referenzieren)
-    - [5.2.4. Externe Links als Referenzen](#524-externe-links-als-referenzen)
-    - [5.2.5. Kontext-Verzeichnis Beispiel (CONTEXT.md)](#525-kontext-verzeichnis-beispiel-contextmd)
-    - [5.2.6. Agent mit Kontextquellen-Verweis](#526-agent-mit-kontextquellen-verweis)
-    - [5.2.7. Best Practice: Kontext-Quellen effektiv nutzen](#527-best-practice-kontext-quellen-effektiv-nutzen)
-  - [5.3. SubAgents für Kontextisolation (VS Code)](#53-subagents-für-kontextisolation-vs-code)
-    - [5.3.1. Das Problem: Context Confusion](#531-das-problem-context-confusion)
-    - [5.3.2. Die Lösung: SubAgents](#532-die-lösung-subagents)
-    - [SubAgent in VS Code verwenden](#subagent-in-vs-code-verwenden)
-    - [Anwendungsfälle für SubAgents](#anwendungsfälle-für-subagents)
-    - [Beispiele](#beispiele)
-    - [SubAgents vs. Handoffs](#subagents-vs-handoffs)
-    - [Best Practice: SubAgents effektiv einsetzen](#best-practice-subagents-effektiv-einsetzen)
-    - [Quellen](#quellen)
-  - [5.4 Prompt-Bibliotheken](#54-prompt-bibliotheken)
-    - [Was sind Prompt-Bibliotheken?](#was-sind-prompt-bibliotheken)
-    - [Nutzen in der Softwareentwicklung](#nutzen-in-der-softwareentwicklung)
-    - [Verzeichnisstruktur im Repository](#verzeichnisstruktur-im-repository)
-    - [Vorlage: Prompt-Datei mit Metadaten](#vorlage-prompt-datei-mit-metadaten)
-    - [Beispiele für Team-Prompts (Auszug)](#beispiele-für-team-prompts-auszug)
-    - [Qualitätssicherung und Governance](#qualitätssicherung-und-governance)
-    - [Integration in Tools/Workflows](#integration-in-toolsworkflows)
-    - [Do / Don’t (kompakt)](#do--dont-kompakt)
-    - [Quellen (kuratierte Auswahl)](#quellen-kuratierte-auswahl)
-  - [5.5 Weitere Best Practices](#55-weitere-best-practices)
+
+---
+
 
 
 
