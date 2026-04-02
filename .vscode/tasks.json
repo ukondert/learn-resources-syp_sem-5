@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "resourceType",
+      "type": "pickString",
+      "description": "Welche Art von Ressource soll importiert werden?",
+      "options": ["skills", "prompts", "agents", "hooks"],
+      "default": "skills"
+    },
+    {
+      "id": "resourceName",
+      "type": "promptString",
+      "description": "Name der Ressource (z.B. 'markdown-to-asciidoc' oder 'skill-creator')"
+    }
+  ],
+  "tasks": [
+    {
+      "label": "⏬ AI Resource aus Remote-Repo importieren",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\.vscode\\scripts\\import-resource.ps1",
+        "${input:resourceType}",
+        "${input:resourceName}"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "clear": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
